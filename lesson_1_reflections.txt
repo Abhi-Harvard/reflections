@@ -1,0 +1,57 @@
+﻿Q: How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+    It will help me when the lines of code are more. It will help me to figure out the bug within minutes rather than in hours.
+
+Q: How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+    It will help me to avoid the same mistakes in future and make me more efficient and less error prone. Version control is present in Google docs, drop box(for 30 days), Wikipedia etc.
+    This enables us to comapre two files which were changed in the past. 
+
+Q: What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+    when to commit is important step or decision  tobe taken while commiting the changes.
+    -> Commit shouldn't be done at the end of adding all features or at the end. 
+    -> It should be done after every hour when you make changes
+    -> or when there is logical change in the code
+    -> when there is change in two separate files commit should be done for each rather than treating it as one 
+    -> for more than two bugs in the same file commit can be used once
+    ->	You commit all the changes required to add a new feature, which you’ve been working on for a week. You haven’t committed since you started working on it.			Avoid doing this
+	->	You find three typos in your README. You fix and commit the first.																									Best practice
+	->	You commit all the changes required to add a new feature, which you’ve been working on for an hour.																	Best practice
+	->	You fix two small bugs in different functions and commit them both at once.													Commit differently since this are two different functions
+
+Q: Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+    Git allows multiple files in one commit because the files which are interlinked needed to be commited together. 
+    eg: when making changes in HTML file coder may also make some changes in css file. Hence this two files need to be commited together than commitng differently.'
+    But in case of google docs if we need to com[are two files] we need to compare them separately but not in case of git
+
+Q: How can you use the commands git log and git diff to view the history of files?
+
+    for using git log just type in "git log" and 
+    for using git diff just tyoe in "git diff first_id second_id"
+    git log-> it is used to view the commit history or commit logs
+    	   ->https://git-scm.com/docs/git-log
+    git diff->
+
+Q: How might using version control make you more confident to make changes that
+could break something?
+
+    lesson 1 lect 25 not understood
+
+Q: Now that you have your workspace set up, what do you want to try using Git for?
+	For my projects.
+    Commands:
+
+	q |    					exit git log!
+	git log  |    				List the commits and show which files have changed
+	git log --stat  |    			Show addition information about the commits
+	git diff id1 id2  |    			Compare two commits
+	git clone  |    			Create a local copy/clone from the repository
+	git config --global color.ui auto |    	get colored diff output
+	git checkout  |    			Shows a previous version of the file. This is not a checkout to edit like in SVN or TFS!
