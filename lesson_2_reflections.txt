@@ -6,33 +6,59 @@ Q: Why do you need to do it?
 
 A:    Without a repository, git cannot do anything. Git works only on git repositories.
 
-Q: How is the staging area different from the working directory and the repository?
-What value do you think it offers?
+Q: How is the staging area different from the working directory and the repository? What value do you think it offers?
 
 A:	The staging area is a monitored area by git. It is not required to contain all files from the working directory. 
 	The working directory contains files, the staging area contains files from the working directory.
    	The files are not yet in the repository so you can still add/remove files from the staging area before making a commit.
 
-Q: How can you use the staging area to make sure you have one commit per logical
-change?
+Q: How can you use the staging area to make sure you have one commit per logical change?
 
-A:
+A:	U can add multiple files to the staging area, where each file consists of small changes made by the programmer and he stages all the files in the staging area. 
+	Hence when there is an logical change made into the files, the programmer can commit the changes made all at a time.
+	After executing a logical change in the code, let's check it by running git dif to check which files were changed from the previous commit, for the modified
+	files, by running git diff to add them to the staging area, then it commit, the last commit will only reflect the last change .
 
-Q: What are some situations when branches would be helpful in keeping your history
-organized? How would branches help?
 
-A:
+Q: What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+A:	If one want to keep the masster code safe and want to experiment with the code he can make a branch and test the code by adding features, updating the code or 
+	bug fixing. Hence branches would be helpful in that case.
+
+	Branches can be useful when you need to make a version with a different language, or add an experimental feature if you do not know if it will be added to 
+	the main version, etc.
+
+	If you want to develop experimental features that are high risk and could break your application, or if you want to have a development version of the 
+	application whose configuration is not suitable for production use.
+	
+	branching is context switching 
 
 Q: How do the diagrams help you visualize the branch structure?
 
+A:	The git log command does not show the entire commit structure for all branches completely. You can go to any branch with the git checkout <branch> command 
+	and look at git log for this branch, so you can represent the branch structure.
+	The command to visualize the branch structure: git log --graph --oneline <branch1> <branch2>
+
+Q: What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+A:	The result is a new branch including all the commits of both previous branches, ordered by date and time. It is represented that way to show that all the 
+	commits are still available even if they came from two different branches.
+
+Q: What are the pros and cons of Git's automatic merging vs. always doing merges manually?
+
 A:
 
-Q: What is the result of merging two branches together? Why do we represent it in
-the diagram the way we do?
+COMMANDS:
 
-A:
+$ git branch					| used to see in which branch u r 
+		
+$ git branch branch_name			| crating a new branch 
 
-Q: What are the pros and cons of Git's automatic merging vs. always doing merges
-manually?
+$ git checkout branch_name			| if ur not on the branch u want to work u need to switch to that branch using "checkout" command
 
-A:
+$ git log --graph --oneline master coins	| used to see commit in one line, shows all commit msg in short, "master" and "coins" are two separate files of which most recent commits are shown
+
+$ git merge master coins			| merge to branches into one
+
+$ git show commit_id				| used to compare the file with its parent even if u dont know its parent id ie comapring child without knowing its parent
+
